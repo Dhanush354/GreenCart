@@ -78,7 +78,6 @@ export const login=async(req,res)=>{
 
 export const isAuth=async(req,res)=>{
     try{
-        console.log("isAuth"+req.body)
         const {userId}=req;
         const user=await User.findById(userId).select("-password")
         return res.json({success: true,user})

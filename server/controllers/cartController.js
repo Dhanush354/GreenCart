@@ -6,8 +6,6 @@ export const updateCart =async(req,res)=>{
         const {userId}=req;
         const cartItems = req.body.cartItems;
 
-        console.log("updateCart\n",cartItems,userId);
-
         await User.findByIdAndUpdate(userId,{cartItem:cartItems})
 
         res.json({success: true,message: "Cart updated"})

@@ -29,7 +29,9 @@ export const placeOrderCOD =async(req,res)=>{
             paymentType:"COD",
         });
 
-       return res.json({success: true,message: "Order placed Successfully"})
+        await User.findByIdAndUpdate(userId, {cartItem: {}});
+
+        return res.json({success: true,message: "Order placed Successfully"})
         
     }
     catch(error){
@@ -83,7 +85,7 @@ export const placeOrderStripe =async(req,res)=>{
                     product_data:{
                         name: item.name,
                     },
-                    unit_amount: (item.price + item.price*0.02)*100
+                    unit_amount: Math.round(item.price + item.price*0.02)*100
                 },
                 quantity: item.quantity,
             }
@@ -184,7 +186,7 @@ export const getUserOrders=async(req,res)=>{
         const {userId}=req;
         const orders=await Order.find({
             userId,
-            $or: [{paymentType: "COD"},{ispaid: true}] //either any one true
+            $or: [{paymentType: "COD"},{isPaid: true}] //either any one true
         }).populate("items.product address").sort({createdAt: -1});
 
         res.json({success: true,orders});
