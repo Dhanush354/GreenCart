@@ -122,7 +122,7 @@ const Navbar = () => {
                             setOpen(false);
                             setShowUserLogin(true);
                         }}
-                            className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
+                            className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-primary-dull transition text-white rounded-full text-sm">
                             Login
                         </button>
                     ) : (
