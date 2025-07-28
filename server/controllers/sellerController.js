@@ -47,6 +47,7 @@ export const sellerLogoutt=async(req,res)=>{
             secure:true,
             sameSite:'none' ,
         });
+        // res.clearCookie('sellerToken');
         return res.json({success:true,message:"Logged Out"})
     }
     catch(error){

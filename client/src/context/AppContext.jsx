@@ -138,7 +138,7 @@ export const AppContextProvider = ({ children }) => {
 
   //update Database cart items
   useEffect(()=>{
-    const updateCart=async ()=>{
+    const updateCart=async()=>{
       try{
         const  {data}=await axios.post('/api/cart/update',{cartItems})
 
@@ -149,7 +149,7 @@ export const AppContextProvider = ({ children }) => {
         toast.error(error.message)
       }
     }
-    if(user && Object.keys(cartItems).length > 0){
+    if(user){
 
       updateCart()
     }

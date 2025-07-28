@@ -5,8 +5,8 @@ import User from "../models/User.js";
 //place order COD :/api/order/cod
 export const placeOrderCOD =async(req,res)=>{
     try{
-        //const userId=req.userId;
-        const {userId,items,address}=req.body;
+        const userId=req.userId;
+        const {items,address}=req.body;
         
         if(!address || items.length===0){
             return res.json({succes :false,message:"Invalid data"})
@@ -43,8 +43,8 @@ export const placeOrderCOD =async(req,res)=>{
 //place order COD :/api/order/stripe
 export const placeOrderStripe =async(req,res)=>{
     try{
-        //const userId=req.userId;
-        const {userId,items,address}=req.body;
+        const userId=req.userId;
+        const {items,address}=req.body;
         const {origin} =req.headers;
 
         if(!address || items.length===0){

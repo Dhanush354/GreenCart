@@ -92,12 +92,20 @@ export const isAuth=async(req,res)=>{
 
 export const logout=async(req,res)=>{
     try{
-        res.clearCookie('token',{
-            httpOnly:true,
-            secure:true,
-            sameSite:'none' ,
-        });
+        // console.log("before logo out : " , res)
+        // res.clearCookie('token',{
+        //     httpOnly:true,
+        //     secure:true,
+        //     sameSite:'None' ,
+        // });
+
+        res.clearCookie('token');
+
+
+        // console.log("after logo out : " , res.cookies)
         return res.json({success:true,message:"Logged Out"})
+
+        
     }
     catch(error){
         console.log(error.message);

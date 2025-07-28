@@ -19,7 +19,7 @@ const port=process.env.PORT || 4000;
 await connectDB();
 await connectCloudinary()
 
-const allowedOrigins=["https://greencart-three-sooty.vercel.app"];
+const allowedOrigins=[process.env.CLIENT_URL];
 
 app.use(cors({origin: allowedOrigins, credentials: true}));
 
