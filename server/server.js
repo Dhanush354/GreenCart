@@ -97,7 +97,7 @@ await connectCloudinary();
 // ✅ CORS must come before routes
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://green-cart-six-lac.vercel.app",
+  "https://greencart-three-sooty.vercel.app",
 ];
 
 // app.use(cors({
