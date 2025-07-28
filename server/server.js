@@ -97,13 +97,13 @@ await connectCloudinary();
 // ✅ CORS must come before routes
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://greencart-five-rust.vercel.app"
+  "https://green-cart-six-lac.vercel.app",
 ];
 
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: allowedOrigins,
+//   credentials: true,
+// }));
 
 app.use((req, res, next) => {
   const origin = req.headers.origin;
