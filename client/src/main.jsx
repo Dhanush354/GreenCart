@@ -2,7 +2,6 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import './setupAxios'
 
 //You're importing the BrowserRouter component from the React Router library (react-router-dom). This component enables client-side routing in a React application.
 import { BrowserRouter } from 'react-router-dom'
