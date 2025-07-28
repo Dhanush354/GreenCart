@@ -51,7 +51,7 @@ const Navbar = () => {
 
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/products'>All product</NavLink>
-                <NavLink to='/'>Contact</NavLink>
+                <NavLink to='/'>Contact us</NavLink>
 
 
                 <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
@@ -122,7 +122,7 @@ const Navbar = () => {
                             setOpen(false);
                             setShowUserLogin(true);
                         }}
-                            className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-primary-dull transition text-white rounded-full text-sm">
+                            className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
                             Login
                         </button>
                     ) : (
